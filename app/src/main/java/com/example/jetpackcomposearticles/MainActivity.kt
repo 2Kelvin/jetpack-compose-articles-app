@@ -1,7 +1,6 @@
 package com.example.jetpackcomposearticles
 
 import android.os.Bundle
-import android.provider.Settings.System.getString
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -14,9 +13,9 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -64,20 +63,20 @@ fun TutorialHeading(heading:String) {
 }
 
 @Composable
-fun paragraphOne(paragraphText1:String) {
+fun ParagraphOne(paragraphText1:String) {
     Text(
         text = paragraphText1,
         Modifier.padding(start = 16.dp, end = 16.dp),
-        //justify.textalign
+        textAlign = TextAlign.Justify
     )
 }
 
 @Composable
-fun paragraphTwo(paragraphText2: String) {
+fun ParagraphTwo(paragraphText2: String) {
     Text(
         text = paragraphText2,
-        Modifier.padding(all = 16.dp)
-        //justify.textalign
+        Modifier.padding(all = 16.dp),
+        textAlign = TextAlign.Justify
     )
 }
 
@@ -86,14 +85,14 @@ fun WholePage(heading: String, paragraphText1: String, paragraphText2: String) {
     Column {
         ArticleImage()
         TutorialHeading(heading)
-        paragraphOne(paragraphText1)
-        paragraphTwo(paragraphText2)
+        ParagraphOne(paragraphText1)
+        ParagraphTwo(paragraphText2)
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun WholePagePreview() {
     JetpackComposeArticlesTheme {
         WholePage(
             heading = stringResource(R.string.article_heading),
