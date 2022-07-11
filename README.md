@@ -4,4 +4,4 @@
 
 Composables mainly used: Text & Image
 
-![jetpack-compose-tutorial-app](https://user-images.githubusercontent.com/85868026/178210919-f63ac726-ceb9-4a4e-bc9b-e2731575a2fa.png)
+![tutorial-app-jetpack-compose](https://user-images.githubusercontent.com/85868026/178212403-71634995-e45d-45e7-8cb8-00f684705e2e.png)
